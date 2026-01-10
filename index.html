@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherNow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="cursor"></div>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.svg" alt="">
+      <span>WeatherNow</span>
+    </div>
+    <div class="nav-links">
+      <a href="#weather">Weather</a>
+      <a href="#ask">Ask</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
+  <div class="intro">
+    <div class="text">
+      <div class="floating-icon">
+      <img src="weather.svg" alt="" srcset="">
+      </div>
+      <h1>Know Your weather</h1>
+      <div class="quote">
+        Smart weather. Clear decisions.
+      </div>
+    </div>
+  </div>
+  <section id="weather">
+    <div class="text1">
+      <h1>Weather Forecast</h1>
+      <p style="color: gray">Enter any location to get real-time weather information</p>
+    </div>
+    <div class="search-card">
+      <div class="input-box">
+        <span>📍</span>
+        <input id="cityInput" type="text" placeholder="Enter city (e.g., Delhi)">
+      </div>
+      <button id="searchBtn" class="search-btn">
+        🔍 Search
+      </button>
+      <div id="weatherResult"></div>
+      <div id="weatherCard" class="weather-card"></div>
+    </div>
+  </section>
+
+  <section id="ask">
+    <div class="text2">
+      <div class="symbol">
+        <img src="ask.svg" alt="" class="icon">
+        <h1 style="font-weight: 500; font-size: 45px;">Ask Anything</h1>
+      </div>
+      <p style="color:gray">Get quick answers to your weather-related questions</p>
+    </div>
+
+    <div class="card">
+      <div class="input">
+        <img src="input.svg" alt="" srcset="" class="input-icon">
+        <input type="text" id="askInput" placeholder="Ask something like: Will it rain today?" />
+        <button id="askBtn">
+          <img class="ask-btn" src="ask1.svg" alt="" srcset="">
+          Ask Now
+        </button>
+      </div>
+
+      <hr />
+
+      <div class="suggestions">
+        <p>Try asking:</p>
+        <div class="choices">
+          <span class="suggestion">Will it rain today?</span>
+          <span class="suggestion">What's the weather like right now?</span>
+          <span class="suggestion">Is it hot or cold outside?</span>
+          <span class="suggestion">What's today's temperature?</span>
+          <span class="suggestion">is it cloudy today?</span>
+        </div>
+      </div>
+      <div id="askAnswer" class="answer-box">
+        <strong>Answer:</strong>
+        <p id="answerText"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="text3">
+      <h1>About WeatherNow</h1>
+      <p style="color:gray">Your one-stop destination for accurate weather information and intelligent weather insights</p>
+    </div>
+    <div class="cards">
+      <!-- First Card -->
+      <div class="A-card">
+        <img style="width:40px" src="logo1.svg" alt="" class="src">
+        <h3>What We Do</h3>
+        <p>WeatherNow provides real-time weather information for any location worldwide. Using advanced weather APIs, we deliver accurate temperature, humidity, wind speed, and atmospheric pressure data right to your screen.</p>
+      </div>
+
+      <!-- Second Card -->
+      <div class="A-card">
+        <img style="width:40px" src="globe.svg" alt="" class="src">
+        <h3>Global Coverage</h3>
+        <p>Access weather data from thousands of cities around the world. Whether you're planning a trip, checking local conditions, or staying informed about weather in different regions, we've got you covered.</p>
+      </div>
+    </div>
+    <div class="features">
+        <h3>Features</h3>
+
+        <div class="feature-cards">
+          <div class="f-box card-blue">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search w-10 h-10 text-blue-500 mx-auto mb-3" data-fg-b7ug25="1.15:85.8877:/components/AboutSection.tsx:40:15:1983:59:e:Search::::::Eqa"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            <h4>Easy Search</h4>
+            <p>Simply enter any city name and get instant weather updates</p>
+          </div>
+          <div class="f-box card-purple">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="purple" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square w-10 h-10 text-purple-500 mx-auto mb-3" data-fg-b7ug31="1.15:85.8877:/components/AboutSection.tsx:48:15:2353:68:e:MessageSquare::::::CQ6a"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <h4>Ask Questions</h4>
+            <p>Get quick answers to your weather-related queries</p>
+          </div>
+          <div class="f-box card-green">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud w-10 h-10 text-green-500 mx-auto mb-3" data-fg-b7ug37="1.15:85.8877:/components/AboutSection.tsx:56:15:2724:59:e:Cloud::::::C7PJ"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg>
+            <h4>Real-Time Data</h4>
+            <p>Access live weather data updated in real-time</p>
+          </div>
+        </div>
+      
+    </div>
+    <div class="last-section">
+      <h2>Stay Informed, Stay Prepared</h2>
+      <p>Weather can change in an instant. With WeatherNow, you'll always be one step ahead.</p>
+      <a  href="#weather" class="last-btn"> 
+        <img src="search.svg" alt="" class="src">
+        Check Weather Now
+      </a>
+    </div>
+    <p class="footer-text">Powered by OpenWeatherMap API | Made with ❤️ for weather enthusiasts</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
